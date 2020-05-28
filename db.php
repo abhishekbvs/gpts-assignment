@@ -2,8 +2,8 @@
 
 $servername = 'localhost';
 $username = 'websetter';
-$password = 'Abhi$shek';
-$db = 'onlineshop';
+$password = '';
+$db = 'gpts-shop';
 
 $con = mysqli_connect($servername, $username, $password,$db);
 

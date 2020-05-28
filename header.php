@@ -11,7 +11,7 @@ session_start();
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-		<title>E-commerce</title>
+		<title>GPTS E-commerce</title>
 
 		<!-- Google font -->
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
@@ -30,12 +30,7 @@ session_start();
 		<link rel="stylesheet" href="css/font-awesome.min.css">
 
 		<!-- Custom stlylesheet -->
-		<link type="text/css" rel="stylesheet" href="css/style.css"/>
-		<link type="text/css" rel="stylesheet" href="css/accountbtn.css"/>
-		
-		
-		
-         		
+		<link type="text/css" rel="stylesheet" href="css/style.css"/>         		
 
     <style>
         #navigation {
@@ -82,7 +77,7 @@ session_start();
 					<div class="row">
 						<div class="col-md-10">
 							<div class="header-logo">
-								<a href="#" class="logo">
+								<a href="index.php" class="logo">
 									<img src="images/gpts.gif" alt="GPTS Logo" style="width:15%;">
 								</a>
 							</div>

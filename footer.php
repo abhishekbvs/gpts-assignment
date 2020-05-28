@@ -1,4 +1,4 @@
-<footer id="footer">
+<footer id="footer" style="margin-top:40px">
 			<div class="section">
 				<div class="container">
 					<div class="row">
@@ -41,8 +41,8 @@
 
 						<div class="clearfix visible-xs"></div>
 					</div>
-					<div class="row text-center">
-							<p>Built by <strong>Abhishek Bvs</strong> &copy;<script>document.write(new Date().getFullYear());</script></p>
+					<div class="row text-center" style="margin-top: 20px">
+							<p style="color: white">Built by <strong>Abhishek Bvs</strong> &copy;<script>document.write(new Date().getFullYear());</script></p>
 					<div>
 				</div>
 			</div>

@@ -18,7 +18,7 @@ if(isset($_POST["category"])){
             
 			$cid = $row["cat_id"];
 			$cat_name = $row["cat_title"];
-            $sql = "SELECT COUNT(*) AS count_items FROM products WHERE product_cat=$i";
+            $sql = "SELECT COUNT(*) AS count_items FROM products WHERE product_cat=$cid";
             $query = mysqli_query($con,$sql);
             $row = mysqli_fetch_array($query);
             $count=$row["count_items"];
@@ -49,7 +49,7 @@ if(isset($_POST["brand"])){
 	$run_query = mysqli_query($con,$brand_query);
 	echo "
 		<div class='aside'>
-							<h3 class='aside-title'>Brand</h3>
+							<h3 class='aside-title'>Instructor</h3>
 							<div class='btn-group-vertical'>
 	";
 	if(mysqli_num_rows($run_query) > 0){
@@ -58,7 +58,7 @@ if(isset($_POST["brand"])){
             
 			$bid = $row["brand_id"];
 			$brand_name = $row["brand_title"];
-            $sql = "SELECT COUNT(*) AS count_items FROM products WHERE product_brand=$i";
+            $sql = "SELECT COUNT(*) AS count_items FROM products WHERE product_brand=$bid";
             $query = mysqli_query($con,$sql);
             $row = mysqli_fetch_array($query);
             $count=$row["count_items"];
@@ -116,7 +116,7 @@ if(isset($_POST["getProduct"])){
 				<div class='col-md-4 col-xs-6' >
 						<a href='product.php?p=$pro_id'><div class='product'>
 							<div class='product-img'>
-								<img src='product_images/$pro_image' style='max-height: 170px;' alt=''>
+								<img src='product_images/$pro_image' style='width: 100;' alt=''>
 								<div class='product-label'>
 									<span class='new'>NEW</span>
 								</div>
@@ -170,38 +170,34 @@ if(isset($_POST["get_seleted_Category"]) || isset($_POST["selectBrand"]) || isse
 			$pro_image = $row['product_image'];
             $cat_name = $row["cat_title"];
 			echo "
-					
-                        
-                        <div class='col-md-4 col-xs-6'>
-								<a href='product.php?p=$pro_id'><div class='product'>
-									<div class='product-img'>
-										<img  src='product_images/$pro_image'  style='max-height: 170px;' alt=''>
-										<div class='product-label'>
-											<span class='new'>NEW</span>
-										</div>
-									</div></a>
-									<div class='product-body'>
-										<p class='product-category'>$cat_name</p>
-										<h3 class='product-name header-cart-item-name'><a href='product.php?p=$pro_id'>$pro_title</a></h3>
-										<h4 class='product-price header-cart-item-info'>Rs.$pro_price</h4>
-										<div class='product-rating'>
-											<i class='fa fa-star'></i>
-											<i class='fa fa-star'></i>
-											<i class='fa fa-star'></i>
-											<i class='fa fa-star'></i>
-											<i class='fa fa-star'></i>
-										</div>
-									</div>
-									<div class='add-to-cart'>
-										<button pid='$pro_id' id='product' href='#' tabindex='0' class='add-to-cart-btn'><i class='fa fa-shopping-cart'></i> add to cart</button>
-									</div>
+				<div class='col-md-4 col-xs-6'>
+						<a href='product.php?p=$pro_id'><div class='product'>
+							<div class='product-img'>
+								<img  src='product_images/$pro_image'  style='width:100%;' alt=''>
+								<div class='product-label'>
+									<span class='new'>NEW</span>
+								</div>
+							</div></a>
+							<div class='product-body'>
+								<p class='product-category'>$cat_name</p>
+								<h3 class='product-name header-cart-item-name'><a href='product.php?p=$pro_id'>$pro_title</a></h3>
+								<h4 class='product-price header-cart-item-info'>Rs.$pro_price</h4>
+								<div class='product-rating'>
+									<i class='fa fa-star'></i>
+									<i class='fa fa-star'></i>
+									<i class='fa fa-star'></i>
+									<i class='fa fa-star'></i>
+									<i class='fa fa-star'></i>
 								</div>
 							</div>
+							<div class='add-to-cart'>
+								<button pid='$pro_id' id='product' href='#' tabindex='0' class='add-to-cart-btn'><i class='fa fa-shopping-cart'></i> add to cart</button>
+							</div>
+						</div>
+					</div>
 			";
 		}
 	}
-	
-
 
 	if(isset($_POST["addToCart"])){
 
@@ -310,10 +306,10 @@ if (isset($_POST["Common"])) {
 	               <table id="cart" class="table table-hover table-condensed" id="">
     				<thead>
 						<tr>
-							<th style="width:50%">Product</th>
+							<th style="width:40%" >Product</th>
 							<th style="width:10%">Price</th>
 							<th style="width:8%">Quantity</th>
-							<th style="width:7%" class="text-center">Subtotal</th>
+							<th style="width:7%" >Subtotal</th>
 							<th style="width:10%"></th>
 						</tr>
 					</thead>
@@ -336,12 +332,13 @@ if (isset($_POST["Common"])) {
 							<td data-th="Product" >
 								<div class="row">
 								
-									<div class="col-sm-4 "><img src="product_images/'.$product_image.'" style="height: 70px;width:75px;"/>
-									<h4 class="nomargin product-name header-cart-item-name"><a href="product.php?p='.$product_id.'">'.$product_title.'</a></h4>
+									<div class="col-sm-4" style="margin-left: 20px"><img src="product_images/'.$product_image.'" style="height: 100px;width:100px;"/>
+									
 									</div>
 									<div class="col-sm-6">
-										<div style="max-width=50px;">
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+										<div style="width=50px;">
+										<h4 class="nomargin product-name header-cart-item-name"><a href="product.php?p='.$product_id.'">'.$product_title.'</a></h4>
+										
 										</div>
 									</div>
 									
@@ -357,9 +354,9 @@ if (isset($_POST["Common"])) {
 							<td data-th="Subtotal" class="text-center"><input type="text" class="form-control total" value="'.$product_price.'" readonly="readonly"></td>
 							<td class="actions" data-th="">
 							<div class="btn-group">
-								<a href="#" class="btn btn-info btn-sm update" update_id="'.$product_id.'"><i class="fa fa-refresh"></i></a>
-								
-								<a href="#" class="btn btn-danger btn-sm remove" remove_id="'.$product_id.'"><i class="fa fa-trash-o"></i></a>		
+								<a href="#" class="btn btn-default btn-sm update" update_id="'.$product_id.'"><i class="fa fa-refresh"></i></a>
+
+								<a href="#" class="btn btn-danger btn-sm remove" remove_id="'.$product_id.'" style="margin-left:8px"><i class="fa fa-trash-o"></i></a>		
 							</div>							
 							</td>
 						</tr>
@@ -372,9 +369,9 @@ if (isset($_POST["Common"])) {
 				<tfoot>
 					
 					<tr>
-						<td><a href="store.php" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
-						<td colspan="2" class="hidden-xs"></td>
-						<td class="hidden-xs text-center"><b class="net_total" ></b></td>
+						<td><a href="index.php" class="btn btn-default"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
+						<td colspan="2" class="hidden-xs"> Total</td>
+						<td class="hidden-xs text-center"><b class="net_total"></b></td>
 						<div id="issessionset"></div>
                         <td>
 							
@@ -398,7 +395,6 @@ if (isset($_POST["removeItemFromCart"])) {
 		exit();
 	}
 }
-
 
 //Update Item From cart
 if (isset($_POST["updateCartItem"])) {

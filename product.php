@@ -47,14 +47,9 @@ include "header.php";
 })(window);
 </script>
 
-		<!-- SECTION -->
 		<div class="section main main-raised">
-			<!-- container -->
 			<div class="container">
-				<!-- row -->
 				<div class="row">
-					<!-- Product main img -->
-					
 					<?php 
 								include 'db.php';
 								$product_id = $_GET['p'];
@@ -72,7 +67,6 @@ include "header.php";
 									echo '
 									
                                     
-                                
                                 <div class="col-md-5 col-md-push-2">
                                 <div id="product-main-img">
                                     <div class="product-preview">
@@ -133,40 +127,17 @@ include "header.php";
 									<i class="fa fa-star"></i>
 									<i class="fa fa-star"></i>
 									<i class="fa fa-star"></i>
-									<i class="fa fa-star-o"></i>
+									<i class="fa fa-star"></i>
 								</div>
-								<a class="review-link" href="#review-form">10 Review(s) | Add your review</a>
 							</div>
 							<div>
-								<h3 class="product-price">$'.$row['product_price'].'<del class="product-old-price">$990.00</del></h3>
-								<span class="product-available">In Stock</span>
+								<h3 class="product-price">Rs.'.$row['product_price'].'  <del class="product-old-price">Rs.10000</del></h3>
+								<span class="product-available">Available</span>
 							</div>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+							<p>'.$row['product_desc'].'</p>
 
-							<div class="product-options">
-								<label>
-									Size
-									<select class="input-select">
-										<option value="0">X</option>
-									</select>
-								</label>
-								<label>
-									Color
-									<select class="input-select">
-										<option value="0">Red</option>
-									</select>
-								</label>
-							</div>
-
+							
 							<div class="add-to-cart">
-								<div class="qty-label">
-									Qty
-									<div class="input-number">
-										
-										<span class="qty-up">+</span>
-										<span class="qty-down">-</span>
-									</div>
-								</div>
 								<div class="btn-group" style="margin-left: 25px; margin-top: 15px">
 								<button class="add-to-cart-btn" pid="'.$row['product_id'].'"  id="product" ><i class="fa fa-shopping-cart"></i> add to cart</button>
                                 </div>
@@ -174,15 +145,9 @@ include "header.php";
 								
 							</div>
 
-							<ul class="product-btns">
-								<li><a href="#"><i class="fa fa-heart-o"></i> add to wishlist</a></li>
-								<li><a href="#"><i class="fa fa-exchange"></i> add to compare</a></li>
-							</ul>
-
 							<ul class="product-links">
-								<li>Category:</li>
-								<li><a href="#">Headphones</a></li>
-								<li><a href="#">Accessories</a></li>
+								<li>Tags:</li>
+								<li><a href="#">'.$row['product_keywords'].'</a></li>
 							</ul>
 
 							<ul class="product-links">
@@ -197,18 +162,7 @@ include "header.php";
 					</div>
 									
 					
-					<!-- /Product main img -->
-
-					<!-- Product thumb imgs -->
-					
-					
-					
-					<!-- /Product thumb imgs -->
-
-					<!-- Product details -->
-					
-					<!-- /Product details -->
-
+			
 					<!-- Product tab -->
 					<div class="col-md-12">
 						<div id="product-tab">
@@ -227,6 +181,8 @@ include "header.php";
 									<div class="row">
 										<div class="col-md-12">
 											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+										
 										</div>
 									</div>
 								</div>
@@ -236,6 +192,7 @@ include "header.php";
 								<div id="tab2" class="tab-pane fade in">
 									<div class="row">
 										<div class="col-md-12">
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 										</div>
 									</div>
@@ -382,39 +339,10 @@ include "header.php";
 														</div>
 													</li>
 												</ul>
-												<ul class="reviews-pagination">
-													<li class="active">1</li>
-													<li><a href="#">2</a></li>
-													<li><a href="#">3</a></li>
-													<li><a href="#">4</a></li>
-													<li><a href="#"><i class="fa fa-angle-right"></i></a></li>
-												</ul>
 											</div>
 										</div>
 										<!-- /Reviews -->
 
-										<!-- Review Form -->
-										<div class="col-md-3 mainn">
-											<div id="review-form">
-												<form class="review-form">
-													<input class="input" type="text" placeholder="Your Name">
-													<input class="input" type="email" placeholder="Your Email">
-													<textarea class="input" placeholder="Your Review"></textarea>
-													<div class="input-rating">
-														<span>Your Rating: </span>
-														<div class="stars">
-															<input id="star5" name="rating" value="5" type="radio"><label for="star5"></label>
-															<input id="star4" name="rating" value="4" type="radio"><label for="star4"></label>
-															<input id="star3" name="rating" value="3" type="radio"><label for="star3"></label>
-															<input id="star2" name="rating" value="2" type="radio"><label for="star2"></label>
-															<input id="star1" name="rating" value="1" type="radio"><label for="star1"></label>
-														</div>
-													</div>
-													<button class="primary-btn">Submit</button>
-												</form>
-											</div>
-										</div>
-										<!-- /Review Form -->
 									</div>
 								</div>
 								<!-- /tab3  -->
@@ -470,7 +398,7 @@ include "header.php";
                                 <div class='col-md-3 col-xs-6'>
 								<a href='product.php?p=$pro_id'><div class='product'>
 									<div class='product-img'>
-										<img src='product_images/$pro_image' style='max-height: 170px;' alt=''>
+										<img src='product_images/$pro_image' style='width: 100%;' alt=''>
 										<div class='product-label'>
 											<span class='new'>NEW</span>
 										</div>
@@ -496,20 +424,11 @@ include "header.php";
 			";
 		}
         ;
-      
 }
 ?>
-					<!-- product -->
-					
-					<!-- /product -->
-
 				</div>
-				<!-- /row -->
-                
 			</div>
-			<!-- /container -->
 		</div>
-	
 <?php
 include "footer.php";
 ?>
