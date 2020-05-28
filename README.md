@@ -26,13 +26,13 @@ Now the website is live.
 
 ### Home Page
 
-![Home Page](https://raw.githubusercontent.com/abhishekbvs/gtps-assignment/master/images/home.png)
+![Home Page](https://raw.githubusercontent.com/abhishekbvs/gpts-assignment/master/images/home.png)
 
 ### Product Page
-![Product Page](https://raw.githubusercontent.com/abhishekbvs/gtps-assignment/master/images/product.png)
+![Product Page](https://raw.githubusercontent.com/abhishekbvs/gpts-assignment/master/images/product.png)
 
 ### Cart Page
-![Cart Page](https://raw.githubusercontent.com/abhishekbvs/gtps-assignment/master/images/cart.png)
+![Cart Page](https://raw.githubusercontent.com/abhishekbvs/gpts-assignment/master/images/cart.png)
 
 ### Admin Page
-![Admin Page](https://raw.githubusercontent.com/abhishekbvs/gtps-assignment/master/images/admin.png)
+![Admin Page](https://raw.githubusercontent.com/abhishekbvs/gpts-assignment/master/images/admin.png)
