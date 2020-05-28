@@ -73,13 +73,13 @@ if(isset($_POST['submit']))
     <div class="well">
       <h3>Category</h3>  
       <p>Product type</p>
-      <input type="number" name="product_type" id="product_type" class="form-control" placeholder="1 electronic,2 Ladies Wears,3 Mens Wear">
+      <input type="number" name="product_type" id="product_type" class="form-control" placeholder=" Enter Category ID">
       <br>
       <p>Vendor / Brand</p>
-      <input type="number" name="brand" id="brand" class="form-control" placeholder="1 HP,2 Samsung,3 Apple,4 motorolla">
+      <input type="number" name="brand" id="brand" class="form-control" placeholder="Enter Brand ID">
       <br>
       <p>Other tags</p>
-      <input type="text" name="tags" id="tags" class="form-control" placeholder="Summer, Soft, Cotton etc">
+      <input type="text" name="tags" id="tags" class="form-control" placeholder="Add tags">
 </div>          
 </div>
 
